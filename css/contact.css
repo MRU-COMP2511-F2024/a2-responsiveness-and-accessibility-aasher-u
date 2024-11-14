@@ -1,0 +1,116 @@
+/* Contact Page specific styles */
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.linkedin {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.linkedin-profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.linkedin-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.linkedin-profile a {
+    display: block;
+    color: #5fd1ec;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.linkedin-profile a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling */
+form {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #5fd1ec;
+}
+
+form label {
+    font-weight: bold;
+    color: #eaf3f2;
+    margin-top: 10px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.salutations, .newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.salutation-button, .newsletter-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 48%;
+    background-color: #5fd1ec;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #0077b5;
+}
