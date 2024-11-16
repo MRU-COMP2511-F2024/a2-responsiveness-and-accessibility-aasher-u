@@ -20,7 +20,7 @@
 }
 
 .services-table img {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 8px;
 }
@@ -34,4 +34,21 @@
     background-color: #333;
     color: #fff;
     border-radius: 8px;
+}
+
+.scroll-button {
+    background-color: #5fd1ec; /* Match the website's primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.scroll-button:hover {
+    background-color: #0077b5; /* Darker shade for hover effect */
 }
