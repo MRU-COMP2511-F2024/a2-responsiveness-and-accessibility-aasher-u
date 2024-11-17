@@ -4,27 +4,6 @@
     border-collapse: collapse;
 }
 
-.services-table th, .services-table td {
-    padding: 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.services-table th {
-    background-color: #5fd1ec;
-    color: #fff;
-}
-
-.services-table tr:nth-child(even) {
-    background-color: #454f5a;
-}
-
-.services-table img {
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
-}
-
 
 /* Merged cell styling */
 .table-header {
@@ -37,18 +16,78 @@
 }
 
 .scroll-button {
-    background-color: #5fd1ec; /* Match the website's primary color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    text-align: center; 
-    margin-top: 20px;
+    display: none; /* Hidden by default for large screens */
 }
 
-.scroll-button:hover {
-    background-color: #0077b5; /* Darker shade for hover effect */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    background: #454f5a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.service-card figure {
+    margin: 1rem 0;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.service-card figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.service-card p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+/* Show scroll button only on screens smaller than 1024px */
+@media screen and (max-width: 1024px) {
+    .scroll-button {
+        display: block;
+        background-color: #5fd1ec;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        text-align: center; 
+        margin-top: 20px;
+    }
+
+    .scroll-button:hover {
+        background-color: #0077b5;
+    }
 }
