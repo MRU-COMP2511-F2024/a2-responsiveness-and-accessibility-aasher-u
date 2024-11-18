@@ -17,7 +17,7 @@
     max-width: 700px;
     background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     border: 1px solid #5fd1ec;
     margin-top: 20px;
 }
@@ -25,4 +25,64 @@
 .float-right {
     float: right;
     margin: 0 0 10px 10px;
+}
+
+/* Small devices (max-width: 590px): Stack header, logo, and text */
+@media screen and (max-width: 590px) {
+    #welcome-text {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    #logo {
+        order: 1; /* This line is to make sure the logo comes before the text*/
+        float: none; 
+        margin: 20px auto; 
+        display: block;
+        width: 200px; 
+        height: auto;
+    }
+
+    h2 {
+        order: 0; 
+    }
+
+    p {
+        order: 2; 
+        margin: 10px 0;
+    }
+}
+
+/* Medium devices (590px to 790px): Center content in 2x2 grid */
+@media screen and (min-width: 590px) and (max-width: 790px) {
+    .centered-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #logo {
+        width: 250px; /* Slightly larger logo */
+    }
+
+    #welcome-text {
+        max-width: 600px;
+    }
+}
+
+/* Large devices (min-width: 790px): Center content with fixed width */
+@media screen and (min-width: 790px) {
+    .centered-content {
+        margin: 0 auto;
+        max-width: 790px;
+    }
+
+    #logo {
+        width: 300px; /* Restore original logo size */
+    }
+
+    #welcome-text {
+        max-width: 700px;
+    }
 }

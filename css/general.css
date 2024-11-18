@@ -5,6 +5,7 @@ html, body {
     font-family: Arial, sans-serif;
     background: #1b2934;
     color: #eaf3f2;
+    font-size: calc(14pt + 0.004vw); /* Base font size scales with viewport width */
 }
 
 body {
@@ -55,12 +56,6 @@ nav ul li a:hover {
     border-radius: 20px;
 }
 
-nav ul li a.active {
-    background-color: #5fd1ec;
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-
 h1 {
     color: white;
 }
@@ -82,3 +77,47 @@ footer::before {
     background-color: #5fd1ec; /* Light blue line */
     margin-bottom: 10px;
 }
+
+/* Hide the checkbox and style the label as the hamburger menu */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Show the hamburger menu icon on small screens */
+@media screen and (max-width: 590px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #454f5a;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    
+    /* Show the menu when checkbox is checked 
+    Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/:checked */
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between menu items */
+    }
+}
+
+

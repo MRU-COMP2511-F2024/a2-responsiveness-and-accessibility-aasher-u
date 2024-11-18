@@ -13,12 +13,15 @@
 <body>
     <header>
         <nav>
+            <input type="checkbox" id="menu-toggle"> <!-- Reference for this: https://developer.mozilla.org/en-US/docs/Web/CSS/:checked  -->
+            <label for="menu-toggle" class="menu-icon">☰ Menu</label>
             <ul>
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <main>
@@ -26,7 +29,7 @@
             <div id="welcome-text">
                 <h2>Welcome to TechWeave</h2>
                 <p>
-                    <img src="images/logo.jpg" alt="TechWeave logo" id="logo" class="float-right">
+                    <img src="images/logo.jpg" alt="TechWeave company logo" id="logo" class="float-right">
                     At TechWeave, we create custom websites tailored to your brand, helping you establish a strong online
                     presence. From unique designs to powerful e-commerce solutions, we build secure, scalable websites
                     that enhance user experience and streamline business operations.
