@@ -51,6 +51,7 @@
 .form-buttons {
     flex-direction: column;
     gap: 10px;
+   
 }
 
 input[type="submit"], 
@@ -96,11 +97,11 @@ input[type="reset"] {
 /* Large screens (790px and up) */
 @media screen and (min-width: 790px) {
     body {
-        background-color: #1b2934; /* Dark background for the sides */
+        background-color: #1b2934; 
     }
 
     .contact-container {
-        background-color: #1b2934; /* Your main content background */
+        background-color: #1b2934; 
         padding: 40px;
         border-radius: 10px;
     }
@@ -182,7 +183,7 @@ input[type="checkbox"] {
 input[type="submit"], input[type="reset"] {
     width: 48%;
     background-color: #5fd1ec;
-    color: white;
+    color: #1b2934;
     cursor: pointer;
     padding: 10px;
     border: none;
