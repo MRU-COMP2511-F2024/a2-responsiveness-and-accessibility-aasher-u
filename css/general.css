@@ -120,4 +120,34 @@ footer::before {
     }
 }
 
+/* Add these to your existing general.css */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Responsive navigation for small screens */
+@media screen and (max-width: 590px) {
+    nav ul {
+        display: none;
+    }
+    
+    #menu-toggle:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 591px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
 

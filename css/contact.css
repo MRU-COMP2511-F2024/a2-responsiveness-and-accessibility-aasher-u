@@ -1,37 +1,117 @@
-/* Contact Page specific styles */
+/* Base styles */
+.contact-container {
+    max-width: 790px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Default styles (for small screens - mobile first) */
 .contact-container {
     display: flex;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .linkedin {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-section {
-    flex: 2;
-    padding: 20px;
+.linkedin h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.linkedin-profiles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .linkedin-profile {
-    margin-bottom: 30px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
 }
 
 .linkedin-profile img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 10px;
     object-fit: cover;
 }
 
+/* Form adjustments for small screens */
+.form-buttons {
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    width: 100%;
+}
+
+/* Medium screens (590px and up) */
+@media screen and (min-width: 590px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .linkedin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: span 2;
+        margin-bottom: 2rem;
+    }
+
+    .linkedin-profile {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    .form-section {
+        grid-column: span 2;
+    }
+
+    .form-buttons {
+        flex-direction: row;
+    }
+
+    input[type="submit"], 
+    input[type="reset"] {
+        width: 48%;
+    }
+}
+
+/* Large screens (790px and up) */
+@media screen and (min-width: 790px) {
+    body {
+        background-color: #1b2934; /* Dark background for the sides */
+    }
+
+    .contact-container {
+        background-color: #1b2934; /* Your main content background */
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    .linkedin-profile img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Rest of your existing styles remain the same */
 .linkedin-profile a {
     display: block;
     color: #5fd1ec;
@@ -113,5 +193,18 @@ input[type="submit"], input[type="reset"] {
 
 input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #0077b5;
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 589px) {
+    .linkedin-profiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkedin-profile {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 

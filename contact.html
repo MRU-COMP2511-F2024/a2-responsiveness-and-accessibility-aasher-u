@@ -13,10 +13,12 @@
 <body>
     <header>
         <nav>
+            <input type="checkbox" id="menu-toggle"> <!-- Reference for this: https://developer.mozilla.org/en-US/docs/Web/CSS/:checked  -->
+            <label for="menu-toggle" class="menu-icon">☰ Menu</label>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <h1>Get in Touch</h1>
@@ -26,13 +28,15 @@
         <div class="contact-container">
             <section class="linkedin">
                 <h2>Connect With Us</h2>
-                <div class="linkedin-profile">
-                    <img src="images/aasheruddin.jpg" alt="Aasher Uddin">
-                    <a href="https://www.linkedin.com/in/aasher-uddin-330407231/" target="_blank">Aasher Uddin</a>
-                </div>
-                <div class="linkedin-profile">
-                    <img src="images/janpizarras.jpg" alt="Jan Pizarras">
-                    <a href="https://www.linkedin.com/in/jan-pizarras-3a08a2197/" target="_blank">Jan Pizarras</a>
+                <div class="linkedin-profiles-container">
+                    <div class="linkedin-profile">
+                        <img src="images/aasheruddin.jpg" alt="Aasher Uddin">
+                        <a href="https://www.linkedin.com/in/aasher-uddin-330407231/" target="_blank">Aasher Uddin</a>
+                    </div>
+                    <div class="linkedin-profile">
+                        <img src="images/janpizarras.jpg" alt="Jan Pizarras">
+                        <a href="https://www.linkedin.com/in/jan-pizarras-3a08a2197/" target="_blank">Jan Pizarras</a>
+                    </div>
                 </div>
             </section>
             
